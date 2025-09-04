@@ -73,6 +73,14 @@ public class SpriteAnimationClipAutoBuilder : EditorWindow
     var srcPath = AssetDatabase.GetAssetPath(spritesFolder);
     var dstPath = AssetDatabase.GetAssetPath(outputFolder);
 
+    var folderName = Path.GetFileName(srcPath.TrimEnd('/', '\\'));
+    var dstSubFolder = Path.Combine(dstPath, folderName).Replace("\\", "/");
+
+    if (!AssetDatabase.IsValidFolder(dstSubFolder))
+    {
+      AssetDatabase.CreateFolder(dstPath, folderName);
+    }
+
     if (!AssetDatabase.IsValidFolder(srcPath) || !AssetDatabase.IsValidFolder(dstPath))
     {
       EditorUtility.DisplayDialog("Error", "no vaild sprites folder or output folder", "OK");
@@ -134,7 +142,8 @@ public class SpriteAnimationClipAutoBuilder : EditorWindow
 
       //save
       var fileName = $"{prefix}.anim";
-      var savePath = Path.Combine(dstPath, fileName).Replace("\\", "/");
+      // 保存 anim 的时候用 dstSubFolder
+      var savePath = Path.Combine(dstSubFolder, $"{prefix}.anim").Replace("\\", "/");
       AssetDatabase.CreateAsset(clip, AssetDatabase.GenerateUniqueAssetPath(savePath));
       createdClips[prefix] = clip;
     }
@@ -145,7 +154,7 @@ public class SpriteAnimationClipAutoBuilder : EditorWindow
     // Generate Animator Override Controller（optional）
     if (createOverrideController && baseController != null)
     {
-      var folderName = Path.GetFileName(srcPath.TrimEnd('/'));
+      //var folderName = Path.GetFileName(srcPath.TrimEnd('/'));
       var aocName = overrideControllerName.Replace("{FolderName}", folderName);
       var aoc = new AnimatorOverrideController { runtimeAnimatorController = baseController };
 
@@ -161,7 +170,7 @@ public class SpriteAnimationClipAutoBuilder : EditorWindow
       }
       aoc.ApplyOverrides(pairs);
 
-      var aocPath = Path.Combine(dstPath, aocName + ".overrideController").Replace("\\", "/");
+      var aocPath = Path.Combine(dstSubFolder, aocName + ".overrideController").Replace("\\", "/");
       AssetDatabase.CreateAsset(aoc, AssetDatabase.GenerateUniqueAssetPath(aocPath));
       AssetDatabase.SaveAssets();
       AssetDatabase.Refresh();
