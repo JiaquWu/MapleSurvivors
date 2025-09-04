@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AOC_Slime
+  m_Controller: {fileID: 9100000, guid: 8e6061d0ffbd2214ca721df322808548, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 7e7f796b404b6484b8e4d7064365beae, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 84ae462e5f24f6d4a9935344ccdf6ec1, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: bd013c46a6f8f234882b62ccf7c00b0a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b1a85d5d3c4319444bfdb2197c45db97, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ac64374495905ad4bac6fc1250cd2b67, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7b4b65c52a12d7447825245d6edd1daa, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5ce414078f114ee40a4e09749ce423a2, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c42ce69e6c1d2a342b9c76da94ed8e29, type: 2}

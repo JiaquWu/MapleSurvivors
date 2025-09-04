@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AOC_Powerful Ascendion
+  m_Controller: {fileID: 9100000, guid: 8e6061d0ffbd2214ca721df322808548, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 7e7f796b404b6484b8e4d7064365beae, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 553f381e91b31ee4d9a79f10f9e94ef9, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: bd013c46a6f8f234882b62ccf7c00b0a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4a1a39ba47408ff4f82a753d8903be22, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 58cdcf50972601645b0b4bc0bad48b0e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8c0836e708e214c4591f34633891e719, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ac64374495905ad4bac6fc1250cd2b67, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6bfb1d4d044c8424ba4fe1188ad82314, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5ce414078f114ee40a4e09749ce423a2, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 78a845adc59e58543846f53c2513274a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a73c171aeb725d44a91a3df62cde198c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a73c171aeb725d44a91a3df62cde198c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 566b4bc6fda421c48b96596feef8042c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 566b4bc6fda421c48b96596feef8042c, type: 2}

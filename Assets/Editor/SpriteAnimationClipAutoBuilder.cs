@@ -162,7 +162,8 @@ public class SpriteAnimationClipAutoBuilder : EditorWindow
       foreach (var kv in baseController.animationClips.Distinct())
       {
         var baseClip = kv;
-        var key = MapStateKey(baseClip.name); // 将 baseClip 名字映射到前缀：Idle/Move/Attack/Die
+        var key = baseClip.name;
+        //var key = MapStateKey(baseClip.name); // 将 baseClip 名字映射到前缀：Idle/Move/Attack/Die
         if (key != null && createdClips.TryGetValue(key, out var overrideClip))
           pairs.Add(new KeyValuePair<AnimationClip, AnimationClip>(baseClip, overrideClip));
         else
@@ -219,16 +220,16 @@ public class SpriteAnimationClipAutoBuilder : EditorWindow
     AssetDatabase.Refresh();
   }
 
-  static string MapStateKey(string baseClipName)
-  {
-    // 将基础Animator中的占位Clip名（如 Idle/Move/Attack/Die）映射到前缀键（idle/move/attack/die）
-    var n = baseClipName.ToLowerInvariant();
-    foreach (var kv in stateMap)
-      if (n.Contains(kv.Value.ToLowerInvariant()))
-        return kv.Key; // 返回用于查找createdClips的键
-                       // 兜底：如果基础clip名本身就是前缀
-    return stateMap.ContainsKey(n) ? n : null;
-  }
+  //static string MapStateKey(string baseClipName)
+  //{
+  //  // 将基础Animator中的占位Clip名（如 Idle/Move/Attack/Die）映射到前缀键（idle/move/attack/die）
+  //  var n = baseClipName.ToLowerInvariant();
+  //  foreach (var kv in stateMap)
+  //    if (n.Contains(kv.Value.ToLowerInvariant()))
+  //      return kv.Key; // 返回用于查找createdClips的键
+  //                     // 兜底：如果基础clip名本身就是前缀
+  //  return stateMap.ContainsKey(n) ? n : null;
+  //}
 
   static bool GuessLoop(string prefix)
   {
@@ -237,7 +238,7 @@ public class SpriteAnimationClipAutoBuilder : EditorWindow
       if (prefix.Contains(kv.Key)) return kv.Value;
 
     // 默认：移动/待机循环，其他不循环
-    if (prefix.Contains("move") || prefix.Contains("walk") || prefix.Contains("run") || prefix.Contains("idle"))
+    if (prefix.Contains("move") || prefix.Contains("walk") || prefix.Contains("run") || prefix.Contains("idle") || prefix.Contains("stand"))
       return true;
     return false;
   }

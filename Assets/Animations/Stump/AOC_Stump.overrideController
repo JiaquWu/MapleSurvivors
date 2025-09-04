@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AOC_Stump
+  m_Controller: {fileID: 9100000, guid: 8e6061d0ffbd2214ca721df322808548, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 7e7f796b404b6484b8e4d7064365beae, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 013aba7b52d17aa4e8f62e092609c58c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: bd013c46a6f8f234882b62ccf7c00b0a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 65dd76ee6e9ab924a9ce3328c94ef300, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ac64374495905ad4bac6fc1250cd2b67, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e4304c984bf48ff4e80dad994dd31d7e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5ce414078f114ee40a4e09749ce423a2, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5d16c97089a249c4ab3ae2c8ee05217f, type: 2}

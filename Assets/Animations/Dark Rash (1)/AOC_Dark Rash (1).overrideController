@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AOC_Dark Rash (1)
+  m_Controller: {fileID: 9100000, guid: 8e6061d0ffbd2214ca721df322808548, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 7e7f796b404b6484b8e4d7064365beae, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7b7fc0ed9a214d1498bcc1cb2a431ae6, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: bd013c46a6f8f234882b62ccf7c00b0a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3736c776d71ac054dbcdc089f2aa6fa6, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 58cdcf50972601645b0b4bc0bad48b0e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: dd464bd078a841e41802100f9502c199, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ac64374495905ad4bac6fc1250cd2b67, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 79b921e3a83736d449fc429ea9a281f2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5ce414078f114ee40a4e09749ce423a2, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d1eef59c3019bbf4586ecd39c809563c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a73c171aeb725d44a91a3df62cde198c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a73c171aeb725d44a91a3df62cde198c, type: 2}
