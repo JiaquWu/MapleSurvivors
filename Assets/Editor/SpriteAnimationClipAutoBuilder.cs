@@ -20,7 +20,6 @@ public class SpriteAnimationClipAutoBuilder : EditorWindow
   int fps = 12;
   bool createOverrideController = true;
 
-  // 关键字→是否循环
   static readonly Dictionary<string, bool> loopRule = new Dictionary<string, bool>
     {
         {"idle", true}, {"move", true}, {"walk", true}, {"run", true}, {"hover", true},
@@ -29,13 +28,12 @@ public class SpriteAnimationClipAutoBuilder : EditorWindow
     };
 
 
-  // 关键字→基础状态名（用于匹配 Animator 中的占位Clip名）
-  static readonly Dictionary<string, string> stateMap = new Dictionary<string, string>
-    {
-        {"idle","Idle"}, {"move","Move"}, {"walk","Move"}, {"run","Move"},
-        {"attack","Attack"}, {"hit","Hit"}, {"hurt","Hit"}, {"die","Die"}, {"death","Die"},
-        {"cast","Attack"}, {"spawn","Idle"}
-    };
+  //static readonly Dictionary<string, string> stateMap = new Dictionary<string, string>
+  //  {
+  //      {"idle","Idle"}, {"move","Move"}, {"walk","Move"}, {"run","Move"},
+  //      {"attack","Attack"}, {"hit","Hit"}, {"hurt","Hit"}, {"die","Die"}, {"death","Die"},
+  //      {"cast","Attack"}, {"spawn","Idle"}
+  //  };
 
   private void OnGUI()
   {
