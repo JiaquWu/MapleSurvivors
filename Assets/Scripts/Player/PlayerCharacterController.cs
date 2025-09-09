@@ -1,10 +1,20 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
 
+[RequireComponent(typeof(PlayerMotor2D))]
 public class PlayerCharacterController : MonoBehaviour
 {
+  [SerializeField] float moveSpeed = 0.5f;
+
   bool isPossessed = false;
+  PlayerMotor2D motor;
+  Vector2 moveInput;
+
+  private void Awake()
+  {
+    motor = GetComponent<PlayerMotor2D>();
+  }
 
   public void Possess(IInputReader inputReader)
   {
@@ -12,6 +22,7 @@ public class PlayerCharacterController : MonoBehaviour
     isPossessed = true;
 
     inputReader.Player.Move.performed += ctx => HandleMove(ctx);
+    inputReader.Player.Move.canceled += ctx => HandleMove(ctx);
   }
 
   public void Unpossess(IInputReader inputReader)
@@ -20,10 +31,19 @@ public class PlayerCharacterController : MonoBehaviour
     isPossessed = false;
 
     inputReader.Player.Move.performed -= ctx => HandleMove(ctx);
+    inputReader.Player.Move.canceled -= ctx => HandleMove(ctx);
   }
 
   private void HandleMove(CallbackContext callbackContext)
   {
+    moveInput = callbackContext.ReadValue<Vector2>();
+    if (moveInput.sqrMagnitude > 1f) moveInput = moveInput.normalized; // 斜向不加速
+  }
 
+  void FixedUpdate()
+  {
+    if (!isPossessed) return;
+    Vector2 delta = moveInput * moveSpeed * Time.fixedDeltaTime;
+    motor.Move(delta);
   }
 }

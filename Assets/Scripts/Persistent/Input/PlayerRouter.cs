@@ -22,10 +22,10 @@ internal interface IInputController
 }
 
 [RequireComponent(typeof(PlayerInput))]
-public class InputManager : SingletonManager<InputManager>, IInputReader, IInputController
+public class PlayerRouter :MonoBehaviour, IInputReader, IInputController
 {
   PlayerInput playerInput;
-
+  public int PlayerIndex { get; private set; }
   public PlayerActions Player { get; private set; }
   public UIActions UI { get; private set; }
 
@@ -36,29 +36,34 @@ public class InputManager : SingletonManager<InputManager>, IInputReader, IInput
   public string uiActionMapName = "UI";
 
   string activeMapName;
-
-  // — 对外公开：只读入口 —
-  public static IInputReader Reader => Instance; // 所有人都拿这个
-
-  // — 仅授权者可拿到控接口（做成 internal / 只在导演初始化时获取）—
-  internal static IInputController Controller => Instance;
-
-  protected override void AwakeEnd()
-  {
-    base.AwakeEnd();
-    if (!TryGetComponent(out playerInput))
-      Debug.LogError("no playerInput component found on InputManager");
-
-    var asset = playerInput.actions;
-
-    Player = new PlayerActions(asset.FindActionMap(playerActionMapName, true));
-    UI = new UIActions(asset.FindActionMap(uiActionMapName, true));
-  }
-
   struct Ctx { public ActionType type; public int token; }
 
   readonly Stack<Ctx> _stack = new Stack<Ctx>();
   int _nextToken = 1;
+
+  //// — 对外公开：只读入口 —
+  //public static IInputReader Reader => Instance; // 所有人都拿这个
+
+  //// — 仅授权者可拿到控接口（做成 internal / 只在导演初始化时获取）—
+  //internal static IInputController Controller => Instance;
+
+  void Awake()
+  {
+    if (!TryGetComponent(out playerInput))
+      Debug.LogError("no playerInput component found on InputManager");
+    PlayerIndex = playerInput.playerIndex;
+
+    var asset = playerInput.actions;
+    Player = new PlayerActions(asset.FindActionMap(playerActionMapName, true));
+    UI = new UIActions(asset.FindActionMap(uiActionMapName, true));
+
+    //// 默认入栈 Player（按需可换 Disable）
+    //_stack.Push(new Ctx { type = ActionType.Player, token = 0 });
+    //((IInputController)this).Switch(ActionType.Player);
+  }
+
+
+  
 
 
   // 初始化时压入一个基准（例如 Player 或 Disable）
