@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMotor2D : MonoBehaviour
@@ -79,5 +80,6 @@ public class PlayerMotor2D : MonoBehaviour
   }
 
   Vector2 _lastHitNormal = Vector2.up; // 做个缓存供投影函数使用
+
   Vector2 GetHitNormal() => _lastHitNormal;
 }

@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
 
 [RequireComponent(typeof(PlayerMotor2D))]
-public class PlayerCharacterController : MonoBehaviour
+public class PlayerCharacterController : MonoBehaviour, ICharacterComponent
 {
   [SerializeField] float moveSpeed = 0.5f;
 
@@ -11,7 +12,23 @@ public class PlayerCharacterController : MonoBehaviour
   PlayerMotor2D motor;
   Vector2 moveInput;
 
-  private void Awake()
+    public Type[] Requirements => new Type[] { };
+
+    public Type[] Provides => throw new NotImplementedException();
+
+    
+
+    public void Init(CharacterComponents components)
+    {
+        //throw new NotImplementedException();
+    }
+
+    public void PostInit(CharacterComponents components)
+    {
+        //throw new NotImplementedException();
+    }
+
+    private void Awake()
   {
     motor = GetComponent<PlayerMotor2D>();
   }
