@@ -2,21 +2,9 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerEventHub : MonoBehaviour, ICharacterComponent
+public class PlayerEventHub: CharacterEventHub
 {
-    public UnityEvent OnPlayerLevelUp = new UnityEvent();
+  public event Action<int> OnLevelUp;
 
-    public Type[] Requirements => new Type[] { }; 
-
-    public Type[] Provides => new Type[] { typeof(PlayerEventHub) };
-
-    public void Init(CharacterComponents components)
-    {
-        //throw new NotImplementedException();
-    }
-
-    public void PostInit(CharacterComponents components)
-    {
-        //throw new NotImplementedException();
-    }
+  public void RaiseLevelUp(int newLevel) => OnLevelUp?.Invoke(newLevel);
 }

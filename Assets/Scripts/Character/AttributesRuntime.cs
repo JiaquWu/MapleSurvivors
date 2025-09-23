@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttributesRuntime : MonoBehaviour, IStatModifierSink, IAttributesQuery, ICharacterComponent
 {
-    public Type[] Requirements => new Type[] { typeof(PlayerEventHub) };
+    public Type[] Requirements => new Type[] { typeof(CharacterEventHub) };
 
     public Type[] Provides => new Type[] { typeof(IAttributesQuery), typeof(IStatModifierSink) };
 
