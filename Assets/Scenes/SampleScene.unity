@@ -779,7 +779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6666fb785a1172346ac504a2a2da4328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimatorView
-  eventHub: {fileID: 0}
+  eventHub: {fileID: 617561712}
   smoothTime: 0.06
   spriteRenderer: {fileID: 906399746}
 --- !u!95 &906399745
