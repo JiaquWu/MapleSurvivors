@@ -274,7 +274,7 @@ GameObject:
   - component: {fileID: 617561711}
   - component: {fileID: 617561710}
   - component: {fileID: 617561709}
-  - component: {fileID: 617561708}
+  - component: {fileID: 617561712}
   m_Layer: 0
   m_Name: stand1_0_0
   m_TagString: Untagged
@@ -436,21 +436,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &617561708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617561698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcc5e28ecdb484f4ab8549499cc19ae6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerEventHub
-  OnPlayerLevelUp:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &617561709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,7 +476,21 @@ MonoBehaviour:
   componentRefs:
   - {fileID: 617561710}
   - {fileID: 617561709}
-  - {fileID: 617561708}
+  - {fileID: 617561702}
+  - {fileID: 617561712}
+  - {fileID: 617561705}
+--- !u!114 &617561712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617561698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d56e28a25cb18144a87c0af4be869d8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerEventHub
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,6 +779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6666fb785a1172346ac504a2a2da4328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimatorView
+  eventHub: {fileID: 0}
   smoothTime: 0.06
   spriteRenderer: {fileID: 906399746}
 --- !u!95 &906399745

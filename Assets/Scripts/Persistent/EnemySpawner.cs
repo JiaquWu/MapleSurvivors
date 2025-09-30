@@ -1,8 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemySpawner : SingletonManager<EnemySpawner>
 {
+  [SerializeField] GameObject enemyPrefab;
+  [SerializeField] int prewarmCount = 30;
+  protected override void AwakeEnd()
+  {
+    base.AwakeEnd();
+    PoolManager.Instance.Prewarm(enemyPrefab, prewarmCount);
+  }
   public event System.Action OnAllEnemiesCleared;
 
   int aliveCount;
@@ -14,7 +21,13 @@ public class EnemySpawner : MonoBehaviour
     aliveCount = 0;
     foreach (var p in prefabs)
     {
-      var enemy = Instantiate(p, GetSpawnPos(), Quaternion.identity);
+      //var enemy = Instantiate(p, GetSpawnPos(), Quaternion.identity);
+      var enemy = PoolManager.Instance.Get(enemyPrefab, GetSpawnPos(), Quaternion.identity);
+
+      //set up enemy here
+
+
+
       var hub = enemy.GetComponent<CharacterEventHub>();
       hubs.Add(hub);
       aliveCount++;

@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerMotor2D : MonoBehaviour
+public class CharacterMotor2D : MonoBehaviour, ICharacterComponent
 {
   [SerializeField] float radiusEpsilon = 0.01f;   // 抗穿透余量
   [SerializeField] int castBufferSize = 8;      // 命中缓存
@@ -81,5 +81,17 @@ public class PlayerMotor2D : MonoBehaviour
 
   Vector2 _lastHitNormal = Vector2.up; // 做个缓存供投影函数使用
 
+  public Type[] Requirements => new Type[] { };
+
+  public Type[] Provides => new Type[] { typeof(CharacterMotor2D) };
+
   Vector2 GetHitNormal() => _lastHitNormal;
+
+  public void Init(CharacterComponents components)
+  {
+  }
+
+  public void PostInit(CharacterComponents components)
+  {
+  }
 }

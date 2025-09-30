@@ -1,10 +1,7 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
-public class PlayerAnimatorView : MonoBehaviour
+public class PlayerAnimatorView : CharacterAnimatorView
 {
-  static readonly int SpeedHash = Animator.StringToHash("Speed");
-  static readonly int AttackHash = Animator.StringToHash("Attack");
 
   [SerializeField] float smoothTime = 0.06f;
   [SerializeField] SpriteRenderer spriteRenderer;

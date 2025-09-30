@@ -3,35 +3,31 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
 
-[RequireComponent(typeof(PlayerMotor2D))]
 public class PlayerCharacterController : MonoBehaviour, ICharacterComponent
 {
   [SerializeField] float moveSpeed = 0.5f;
 
   bool isPossessed = false;
-  PlayerMotor2D motor;
+  CharacterMotor2D motor;
   Vector2 moveInput;
 
-    public Type[] Requirements => new Type[] { };
+    public Type[] Requirements => new Type[] { typeof(CharacterMotor2D) };
 
-    public Type[] Provides => throw new NotImplementedException();
+    public Type[] Provides => new Type[] { };
 
-    
 
-    public void Init(CharacterComponents components)
-    {
-        //throw new NotImplementedException();
-    }
+
+  public void Init(CharacterComponents components)
+  {
+    //throw new NotImplementedException();
+    motor = components.Require<CharacterMotor2D>();
+  }
 
     public void PostInit(CharacterComponents components)
     {
         //throw new NotImplementedException();
     }
 
-    private void Awake()
-  {
-    motor = GetComponent<PlayerMotor2D>();
-  }
 
   public void Possess(IInputReader inputReader)
   {
