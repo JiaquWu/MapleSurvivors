@@ -14,10 +14,10 @@ public class EnemySpec : ScriptableObject
   public float attackCooldown = 1.5f;
   //public AttackType attackType;
 
-  //[Header("Presentation")]
-  //public SpriteClip moveClip;
-  //public SpriteClip hurtClip;
-  //public SpriteClip deathClip;
+  [Header("Presentation")]
+  public SpriteClip moveClip;
+  public SpriteClip hurtClip;
+  public SpriteClip deathClip;
 
   [Header("Rewards")]
   public int xpReward = 1;

@@ -8,7 +8,7 @@ public class EnemySpawner : SingletonManager<EnemySpawner>
   protected override void AwakeEnd()
   {
     base.AwakeEnd();
-    PoolManager.Instance.Prewarm(enemyPrefab, prewarmCount);
+    //PoolManager.Instance.Prewarm(enemyPrefab, prewarmCount);
   }
   public event System.Action OnAllEnemiesCleared;
 
