@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba938b4d7c270c04e82415c0a5999850, type: 3}
+  m_Name: EnemySpec
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpec
+  baseAttribute: {fileID: 11400000, guid: 82860f31f31668043a27722b17549089, type: 2}
+  moveSpeed: 2
+  attackCooldown: 1.5
+  Sprite: {fileID: 21300000, guid: eeacf93a2a189b642bb5ce3a6d3e0dee, type: 3}
+  moveClip:
+    frames:
+    - {fileID: 21300000, guid: eeacf93a2a189b642bb5ce3a6d3e0dee, type: 3}
+    - {fileID: 21300000, guid: 9782bedcf0b8690489bffd9170b60f8f, type: 3}
+    - {fileID: 21300000, guid: d8fac33338cc76443bf7afa468ca542c, type: 3}
+    - {fileID: 21300000, guid: b4a2649fcfa8b5a44a32a77056a33ee6, type: 3}
+    - {fileID: 21300000, guid: 5ac530e5add4d7a46ac833925f768f0c, type: 3}
+    fps: 10
+    loop: 1
+  hurtClip:
+    frames:
+    - {fileID: 21300000, guid: d383671e9c1d8da43b409eb1bc677e11, type: 3}
+    fps: 10
+    loop: 0
+  deathClip:
+    frames:
+    - {fileID: 21300000, guid: ceb03c1471dec09418e619809dad9f55, type: 3}
+    - {fileID: 21300000, guid: 275024eda0a465d448024544d9407994, type: 3}
+    - {fileID: 21300000, guid: 210abaa11f0dfaa48b993747881ed905, type: 3}
+    fps: 10
+    loop: 0
+  xpReward: 1
+  goldReward: 0

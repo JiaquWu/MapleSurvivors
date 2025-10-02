@@ -3,7 +3,7 @@ using UnityEngine;
 
 public struct PlayerSnapshot { public Vector2 Pos; public int Id; }
 
-public class EnemyScheduler : MonoBehaviour
+public class EnemyScheduler : SingletonManager<EnemyScheduler> 
 {
   readonly List<EnemyBrain> brains = new();
   readonly List<SpriteAnimatorLite> anims = new();

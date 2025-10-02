@@ -15,6 +15,7 @@ public class EnemySpec : ScriptableObject
   //public AttackType attackType;
 
   [Header("Presentation")]
+  public Sprite Sprite;
   public SpriteClip moveClip;
   public SpriteClip hurtClip;
   public SpriteClip deathClip;

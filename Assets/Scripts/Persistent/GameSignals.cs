@@ -53,6 +53,18 @@ public readonly struct WaveStarted
   public WaveStarted(int index) { Index = index; }
   public override string ToString() => $"WaveStarted(Index={Index})";
 }
+
+public readonly struct NewGameStarted
+{
+  public int Seed { get; }
+  public NewGameStarted(int seed) { Seed = seed; }
+  public override string ToString()
+  {
+    return $"NewGameStarted(Seed={Seed})";
+  }
+}
+
+
 //public record GameOver();
 
 //public record WaveStarted(int Index);

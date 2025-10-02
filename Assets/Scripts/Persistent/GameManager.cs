@@ -1,19 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
+public static class SceneNames
+{
+  public const string Startup = "Startup";
+  public const string MainMenu = "MainMenu";
+  public const string Persistent = "Persistent";
+  public const string InGame = "InGame";
+  // ...
+}
 
 public enum GameState { Boot, MainMenu, Loading, Playing, WaveClear, LevelClear, GameOver }
 
 public class GameManager : SingletonManager<GameManager>
 {
+  [SerializeField] int defaultSeed = 1;
+
   //[SerializeField] LevelEventBus levelBus;
-  [SerializeField] PlayerSpawner playerSpawner;
-  [SerializeField] LevelManager levelManager;
+  //[SerializeField] PlayerSpawner playerSpawner;
+  //[SerializeField] LevelManager levelManager;
   //[SerializeField] SceneLoader sceneLoader;   // 你已有异步加载器
 
   GameState state;
   PlayerHandle player;
+
+  protected override void AwakeEnd()
+  {
+    base.AwakeEnd();
+    SceneManager.sceneLoaded += SceneManager_sceneLoaded;
+  }
+
+  private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)
+  {
+    if(arg0 == SceneManager.GetSceneByName(SceneNames.InGame))
+    {
+      GameSignals.Publish(new NewGameStarted(defaultSeed));
+    }
+  }
 
   void Start() => ToMainMenu();
 

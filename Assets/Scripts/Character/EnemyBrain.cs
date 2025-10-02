@@ -10,13 +10,13 @@ public class EnemyBrain : MonoBehaviour, ICharacterComponent
   EnemyState state;
 
 
-  public Type[] Requirements  => new Type[] { };
+  public Type[] Requirements  => new Type[] { typeof(SpriteAnimatorLite) };
 
   public Type[] Provides => new Type[] { typeof(EnemyBrain) };
 
   public void Init(CharacterComponents components)
   {
-
+    anim = components.Require<SpriteAnimatorLite>();
   }
 
   public void PostInit(CharacterComponents components)
@@ -26,37 +26,43 @@ public class EnemyBrain : MonoBehaviour, ICharacterComponent
 
   public void Tick(float dt, in PlayerSnapshot[] players)
   {
-    if (state == EnemyState.Dead) return;
+    if (state == EnemyState.Dead)
+    {
+      EnemyScheduler.Instance.Unregister(this, anim);
+
+      return;
+    }
+
 
     // 简单 LOD：太远就低频/睡眠（由 Scheduler 控制）
     // 1) 选最近玩家(每若干帧)
-  //  var target = SelectNearest(players, ref targetPlayerId);
+    //  var target = SelectNearest(players, ref targetPlayerId);
 
-  //  switch (state)
-  //  {
-  //    case EnemyState.Chase:
-  //      // 追
-  //      Vector2 dir = (target.Pos - (Vector2)transform.position).normalized;
-  //      motor.Move(dir, spec.MoveSpeed, dt);
+    //  switch (state)
+    //  {
+    //    case EnemyState.Chase:
+    //      // 追
+    //      Vector2 dir = (target.Pos - (Vector2)transform.position).normalized;
+    //      motor.Move(dir, spec.MoveSpeed, dt);
 
-  //      cd -= dt;
-  //      if (cd <= 0f && CanAttack(target))
-  //      {
-  //        state = EnemyState.Attack;
-  //        cd = spec.AttackCooldown;
-  //        anim.PlayOnce(spec.AttackClip, onComplete: () => {
-  //          PerformAttack(target);
-  //          anim.Play(spec.MoveClip);
-  //          state = EnemyState.Chase;
-  //        });
-  //      }
-  //      break;
+    //      cd -= dt;
+    //      if (cd <= 0f && CanAttack(target))
+    //      {
+    //        state = EnemyState.Attack;
+    //        cd = spec.AttackCooldown;
+    //        anim.PlayOnce(spec.AttackClip, onComplete: () => {
+    //          PerformAttack(target);
+    //          anim.Play(spec.MoveClip);
+    //          state = EnemyState.Chase;
+    //        });
+    //      }
+    //      break;
 
-  //    case EnemyState.Hurt:
-  //      // 短暂硬直/闪白，由 OnHurt 设置计时器
-  //      // 计时器结束会回到 Chase
-  //      break;
-  //  }
+    //    case EnemyState.Hurt:
+    //      // 短暂硬直/闪白，由 OnHurt 设置计时器
+    //      // 计时器结束会回到 Chase
+    //      break;
+    //  }
   }
   //void OnHurt(DamageInfo dmg)
   //{

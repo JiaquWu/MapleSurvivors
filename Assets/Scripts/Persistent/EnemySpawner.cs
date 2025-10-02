@@ -8,12 +8,22 @@ public class EnemySpawner : SingletonManager<EnemySpawner>
   protected override void AwakeEnd()
   {
     base.AwakeEnd();
-    //PoolManager.Instance.Prewarm(enemyPrefab, prewarmCount);
+
+    GameSignals.Subscribe<NewGameStarted>(OnNewGameStarted);
+
+    PoolManager.Instance.Prewarm(enemyPrefab, prewarmCount);
   }
   public event System.Action OnAllEnemiesCleared;
 
   int aliveCount;
   readonly List<CharacterEventHub> hubs = new();
+
+  void OnNewGameStarted(NewGameStarted newGameStarted)
+  {
+
+    // Example: spawn a wave of 5 enemies
+    SpawnWave(PoolManager.Instance.GetMultiple(enemyPrefab, 5));
+  }
 
   public void SpawnWave(GameObject[] prefabs)
   {
@@ -25,6 +35,9 @@ public class EnemySpawner : SingletonManager<EnemySpawner>
       var enemy = PoolManager.Instance.Get(enemyPrefab, GetSpawnPos(), Quaternion.identity);
 
       //set up enemy here
+      var brain = enemy.GetComponent<EnemyBrain>();
+      var anim = enemy.GetComponent<SpriteAnimatorLite>();
+      EnemyScheduler.Instance.Register(brain, anim);
 
 
 
@@ -42,6 +55,7 @@ public class EnemySpawner : SingletonManager<EnemySpawner>
 
   void HandleDeath()
   {
+
     aliveCount--;
     if (aliveCount <= 0) OnAllEnemiesCleared?.Invoke();
   }

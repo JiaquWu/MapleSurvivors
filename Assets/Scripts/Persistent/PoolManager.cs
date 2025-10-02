@@ -21,6 +21,17 @@ public class PoolManager : SingletonManager<PoolManager>
   public GameObject Get(GameObject prefab, Vector3 pos, Quaternion rot)
       => GetPool(prefab).Get(pos, rot);
 
+  public GameObject[] GetMultiple(GameObject prefab, int count)
+  {
+    var arr = new GameObject[count];
+    var pool = GetPool(prefab);
+    for (int i = 0; i < count; i++)
+    {
+      arr[i] = pool.Get(Vector3.zero, Quaternion.identity);
+    }
+    return arr;
+  }
+
   public static void Release(GameObject go)
   {
     var tag = go.GetComponent<PooledTag>();
