@@ -1,0 +1,494 @@
+fileFormatVersion: 2
+guid: 5f783570bd66aac488fd7fcd2cadf980
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2124181423167816148
+    second: skill.151121040.mob.3_0
+  - first:
+      213: -286220059417460462
+    second: skill.151121040.mob.3_1
+  - first:
+      213: 4732782990588158228
+    second: skill.151121040.mob.3_2
+  - first:
+      213: -7308517964332099590
+    second: skill.151121040.mob.3_3
+  - first:
+      213: 6855767378607310661
+    second: skill.151121040.mob.3_4
+  - first:
+      213: -3022614314013399842
+    second: skill.151121040.mob.3_5
+  - first:
+      213: 4415874863743199960
+    second: skill.151121040.mob.3_6
+  - first:
+      213: 5375059562055702849
+    second: skill.151121040.mob.3_7
+  - first:
+      213: 5237119022365342335
+    second: skill.151121040.mob.3_8
+  - first:
+      213: -5725771654173429985
+    second: skill.151121040.mob.3_9
+  - first:
+      213: -6572298060228843146
+    second: skill.151121040.mob.3_10
+  - first:
+      213: -4060238641308491659
+    second: skill.151121040.mob.3_11
+  - first:
+      213: 5214047414046876715
+    second: skill.151121040.mob.3_12
+  - first:
+      213: 5134782348683290677
+    second: skill.151121040.mob.3_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: skill.151121040.mob.3_0
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 628
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d1c66effbb9a7d10800000000000000
+      internalID: 2124181423167816148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill.151121040.mob.3_1
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 642
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 211c4d65f54270cf0800000000000000
+      internalID: -286220059417460462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill.151121040.mob.3_2
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 648
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 411a409fd093ea140800000000000000
+      internalID: 4732782990588158228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill.151121040.mob.3_3
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 641
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af79c6532ade29a90800000000000000
+      internalID: -7308517964332099590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill.151121040.mob.3_4
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 625
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54789908b14942f50800000000000000
+      internalID: 6855767378607310661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill.151121040.mob.3_5
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 628
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed46830cb448d06d0800000000000000
+      internalID: -3022614314013399842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill.151121040.mob.3_6
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 630
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8da6df1dac6584d30800000000000000
+      internalID: 4415874863743199960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill.151121040.mob.3_7
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 612
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14995e2813c089a40800000000000000
+      internalID: 5375059562055702849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill.151121040.mob.3_8
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 616
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7af68ed00cfda840800000000000000
+      internalID: 5237119022365342335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill.151121040.mob.3_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 465
+        width: 44
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1fedf75409f980b0800000000000000
+      internalID: -5725771654173429985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill.151121040.mob.3_10
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 123
+        width: 722
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 679221a5cb18ac4a0800000000000000
+      internalID: -6572298060228843146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill.151121040.mob.3_11
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 319
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5702e71c77227a7c0800000000000000
+      internalID: -4060238641308491659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill.151121040.mob.3_12
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 340
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b24ee447f740c5840800000000000000
+      internalID: 5214047414046876715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill.151121040.mob.3_13
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 327
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 538a6344759624740800000000000000
+      internalID: 5134782348683290677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      skill.151121040.mob.3_0: 2124181423167816148
+      skill.151121040.mob.3_1: -286220059417460462
+      skill.151121040.mob.3_10: -6572298060228843146
+      skill.151121040.mob.3_11: -4060238641308491659
+      skill.151121040.mob.3_12: 5214047414046876715
+      skill.151121040.mob.3_13: 5134782348683290677
+      skill.151121040.mob.3_2: 4732782990588158228
+      skill.151121040.mob.3_3: -7308517964332099590
+      skill.151121040.mob.3_4: 6855767378607310661
+      skill.151121040.mob.3_5: -3022614314013399842
+      skill.151121040.mob.3_6: 4415874863743199960
+      skill.151121040.mob.3_7: 5375059562055702849
+      skill.151121040.mob.3_8: 5237119022365342335
+      skill.151121040.mob.3_9: -5725771654173429985
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
